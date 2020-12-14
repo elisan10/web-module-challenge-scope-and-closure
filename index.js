@@ -28,6 +28,12 @@ console.log(processFirstItem(['foo','bar'],function(str){return str+str}));
   Study the code for counter1 and counter2, then answer the questions below.
   
   1. What is the difference between counter1 and counter2?
+    - For the counter1 code, a function is created and is named 'counterMaker'. In that function, a variable named 'count' is declared and is given a value of 0. 
+      What is returned is a newly created function named 'counter' that will return the value of the count variable + 1. 
+      A new variable named 'counter1' is declared and is given the value of the function counterMaker.  
+
+    - For the counter2 code, a variable named 'count' is declared and is given the value of 0. A function is then created is given the name 'counter2'. 
+      In that function, the return is the value
   
   2. Which of the two uses a closure? How can you tell?
   
@@ -62,10 +68,11 @@ Use the inning function below to do the following:
 NOTE: This will be a callback function for the tasks below
 */
 
-function inning(/*Code Here*/){
-    /*Code Here*/
+function inning(){
+    const score = Math.floor(Math.random() * 3)
+     return score
 }
-
+inning()
 
 /* ⚾️⚾️⚾️ Task 3: finalScore() ⚾️⚾️⚾️
 Use the finalScore function below to do the following:
@@ -80,17 +87,26 @@ Use the finalScore function below to do the following:
   "Away": 5
 }
 */ 
-
-function finalScore(/*code Here*/){
-  /*Code Here*/
+const newInning = inning()
+function finalScore(newInning, numberOfInnings){
+  const inningScore = { 
+    "Home": 0,
+    "Away": 0
+  }
+  for(var i = 0; i < newInning; i++){
+    return inningScore["Home"]["Away"] + newInning
+  }
+  
+  return inningScore 
 }
 
+finalScore()
 /* ⚾️⚾️⚾️ Task 4: getInningScore() ⚾️⚾️⚾️
 Use the getInningScore() function below to do the following:
   1. Receive a callback function - you will pass in the inning function from task 2 as your argument 
   2. Return an object with a score for home and a score for away that populates from invoking the inning callback function */
 
-function getInningScore(/*Your Code Here */) {
+function getInningScore(newInning,) {
   /*Your Code Here */
 }
 
