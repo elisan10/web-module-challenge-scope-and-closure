@@ -43,6 +43,7 @@ Find the file `index.js` and complete the tasks.
 Edit the `ReadMe` file with your answers.
 
 1. In your own words, define closure (1-2 sentences).
+  - Closures is the child function having access to the parent function's variable but the parent not having the same access as the child. 
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -64,8 +65,11 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+  - Closure is used when the new variables are created outside of the function and they are able to receive the value of the function and all that is in it.
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+  - The first and second time dansRoll is called, it invokes the personalDisc function by returning the the same name in each call but different newRoll for each call. 
 c. What is the lexical scope of `newRoll`? 
+  - The lexical scope of newRoll is only within the return function.
 
 
 ### Task 3 - Stretch Goals
